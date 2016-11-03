@@ -1,0 +1,16 @@
+3
+2
+0 1 0
+2 0 2.5
+1 2 5
+0 2 2 50 10 -150 400
+2 1 2 50 10 -150 400
+
+// Dane dla zadania 5.1
+// nn - ilosc wezlow
+// ne - ilosc elementow
+// id1 bc1 x1
+// id2 bc2 x2
+// id3 bc3 x3
+id1 id2 S k alfa q tout
+id2 id3 S k alfa q tout
