@@ -14,5 +14,7 @@ class Net {
       void wyznaczMacierzWspolczynnikowUkladuRownan();
       void wypiszMacierzWspolczynnikow();
       void showNodesAndElements();
+      void setCalculatedTemperatures(float *t);
+      void saveNodesInFile(const char * path);
 };
 #endif

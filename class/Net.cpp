@@ -1,4 +1,5 @@
 #include <iostream>
+#include <fstream>
 #include "Node.hpp"
 #include "Element.hpp"
 #include "Net.hpp"
@@ -50,4 +51,19 @@ void Net::showNodesAndElements() {
         cout << endl;
     }
     cout << endl;
+}
+
+void Net::setCalculatedTemperatures(float *t) {
+    for(int i = 0; i < this->nn; i++) {
+        nodes[i]->t = t[i];
+    }
+}
+
+void Net::saveNodesInFile(const char * path) {
+    ofstream out(path);
+    for(int i = 0; i < this->nn; i++) {
+        out << nodes[i]->x << " " << nodes[i]->t << endl;
+        cout << nodes[i]->id << " " << nodes[i]->x << " " << nodes[i]->t - 273.16 << endl;
+    }
+    out.close();
 }

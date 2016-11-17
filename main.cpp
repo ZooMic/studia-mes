@@ -72,7 +72,7 @@ float * metodaGaussaSeidla(float **H, float *P, int n) {
 }
 
 int main() {
-  Net *net = createNet("dane.txt");
+  Net *net = createNet("dane_my_own_5.txt");
   net->wyznaczMacierzWspolczynnikowUkladuRownan();
   //net->wypiszMacierzWspolczynnikow();
   int n = net->ne+1;
@@ -90,7 +90,6 @@ int main() {
   }
   // Próba gouss'a
   float *t = metodaGaussaSeidla(h,p,n);
-  for(int i = 0; i < n ; i++) {
-      cout << "t" << i << " = " << t[i] << endl;
-  }
+  net->setCalculatedTemperatures(t);
+  net->saveNodesInFile("wyniki.txt");
 }
